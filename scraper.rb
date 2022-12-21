@@ -35,11 +35,11 @@ while pages_to_scrape.length != 0 && i < limit do
     },
   })
 
-  # parsing the HTML document returned by server
+  # parsing the HTML document returned by the server
   document = Nokogiri::HTML(response.body)
 
   # extracting the list of URLs from
-  # the the pagination elements
+  # the pagination elements
   new_pagination_links = document
                            .css("a.page-numbers")
                            .map{ |a| a.attribute("href") }
