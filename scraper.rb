@@ -81,7 +81,6 @@ while pages_to_scrape.length != 0 && i < limit do
   i = i + 1
 end
 
-
 # defining the header row of the CSV file
 csv_headers = ["url", "image", "name", "price"]
 CSV.open("output.csv", "wb",write_headers: true, headers: csv_headers) do |csv|
